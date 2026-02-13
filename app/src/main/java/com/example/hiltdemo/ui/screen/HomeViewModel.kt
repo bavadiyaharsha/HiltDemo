@@ -3,7 +3,6 @@ package com.example.hiltdemo.ui.screen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.hiltdemo.data.Post
-import com.example.hiltdemo.domain.repository.Repository
 import com.example.hiltdemo.domain.usecase.GetObjectUseCase
 import com.example.hiltdemo.ui.state.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel

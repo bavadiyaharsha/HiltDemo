@@ -53,7 +53,7 @@ fun LoadData(
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel()
 ){
-    val uiState by  viewModel._uiState.collectAsStateWithLifecycle()
+    val uiState by  viewModel.uiState.collectAsStateWithLifecycle()
 
     LaunchedEffect(Unit) {
         viewModel.callObjectApi()
@@ -66,7 +66,7 @@ fun LoadData(
         is UiState.Success -> {
             val posts = (uiState as UiState.Success<List<Post>>).data
             LazyColumn(
-                modifier = Modifier.padding(16.dp),
+                modifier.padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ){
                 items(posts) { item ->
