@@ -35,13 +35,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             HiltDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Column() {
+                    Column( modifier = Modifier.padding(innerPadding)
+                    ) {
                         LoadData()
                     }
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+
                 }
             }
         }
